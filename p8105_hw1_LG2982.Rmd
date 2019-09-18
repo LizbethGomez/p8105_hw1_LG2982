@@ -1,0 +1,51 @@
+---
+title: "p8105_hw1_LG2982"
+author: "Lizbeth Gomez"
+date: "9/15/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+```
+
+
+```{r, Problem_1}
+
+
+problem_1_df = tibble(
+  x = rnorm(8, sd = .5),
+  vec_logical = (x>= 0),
+  vec_char = c("Coding", "in", "R", "language", "is", "so", "much","fun"),
+  vec_factor = factor(c("male", "male", "female", "female","male", "male", "female", "female"))
+)
+
+
+```
+
+```{r, }
+
+```
+
+
+```{r, Problem_2}
+
+problem_2_df = tibble(
+   x = rnorm(500, sd = .5),
+   y = rnorm(500, sd = .5),
+   vec_logic = (x + y > 1),
+   vec_char =( as.numeric(vec_logic)),
+   vec_fact =( as.factor(vec_logic ))
+)
+    nrow(problem_2_df)   
+    ncol(problem_2_df)  # *the size of the dataset 500 by 5
+    mean(x) # mean = 0.01145053
+    sd(x)  #standard deviation = 0.5066945
+      
+##tempted to use the dollar sign
+    
+
+```
+
