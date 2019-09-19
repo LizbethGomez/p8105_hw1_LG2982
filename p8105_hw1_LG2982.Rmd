@@ -40,27 +40,14 @@ problem_1_df%>%
 
 
 ```{r, eval=FALSE}
-problem_1_df%>%
-mutate (as.numeric(vec_logical))
+problem_1_df%>% ###NEED HELP HERE
+  mutate  (as.numeric(vec_logical))
 
 problem_1_df%>%
-mutate (as.numeric(vec_factor))
+  mutate (as.numeric(vec_factor))
 
 problem_1_df%>%
-mutate (as.numeric(vec_char))
-```
-
-```{r, }
-problem_1_df%>%
-mutate (as.numeric(vec_logical))
-
-
-problem_1_df%>%
-mutate (as.numeric(vec_factor))
-
-problem_1_df%>%
-mutate (as.numeric(vec_char))
-
+  mutate (as.numeric(vec_char))
 ```
 
 
