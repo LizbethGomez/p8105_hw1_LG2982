@@ -17,11 +17,13 @@ library(tidyverse) # this is how I load a library
 
 problem_1_df = tibble(
   x = rnorm(8, sd = .5),
-  vec_logical = (x>= 0),
+  vec_logical = (x> 0),
   vec_char = c("Coding", "in", "R", "language", "is", "so", "much","fun"),
   vec_factor = factor(c("male", "male", "female", "female","male", "male", "female", "female"))
 )
 
+problem_1_df%>%
+  summarise(meanx = mean(x))  # the mean of x (a random sample of size 8 from a standard Normal distribution is 0.0563209	)
 
 ```
 
