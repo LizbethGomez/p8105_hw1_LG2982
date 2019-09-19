@@ -76,6 +76,7 @@ problem_2_df = tibble(
   
   
 ggplot(problem_2_df, aes(x = x, y = y, color = x + y > 1)) + geom_point() # colored scatterplot where blue are x + y > 1 and pink are the values x + y =< 1
+ggsave("scatter_plot_1.pdf", height = 4, width = 6)
 
 ggplot(problem_2_df, aes(x = x, y = y, color = vec_char)) + geom_point() # colored scatterplot where darker blue are the vaues are closer to zero and lighter blue are those closer to 1
 
