@@ -25,6 +25,14 @@ problem_1_df = tibble(
 problem_1_df%>%
   summarise(meanx = mean(x))  # the mean of x (a random sample of size 8 from a standard Normal distribution is 0.0563209	)
 
+problem_1_df%>%
+  summarise(meanlog = mean(vec_logical)) # mean of this is 0.375	
+
+problem_1_df%>%
+  summarise(meanchar = mean(vec_char)) # cant do this because is a character vector
+
+problem_1_df%>%
+  summarise(meanfact = mean(vec_factor)) #cant do this because is a factor vector
 ```
 
 ```{r, }
