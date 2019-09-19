@@ -51,7 +51,7 @@ problem_1_df%>%
 ```
 
 
-```{r, Problem_2, eval=FALSE}
+```{r, Problem_2}
 
 problem_2_df = tibble(
    x = rnorm(500, sd = .5),
@@ -62,10 +62,16 @@ problem_2_df = tibble(
 )
     nrow(problem_2_df)   
     ncol(problem_2_df)  # *the size of the dataset 500 by 5
-    mean(x) # mean = 0.01145053
-    sd(x)  #standard deviation = 0.5066945
-      
-##tempted to use the dollar sign
+    
+    
+   problem_2_df%>%
+    summarise(mean_x = mean(x), 
+              sd(x), 
+              median (x))  # mean = 0.00460194, stdev =0.5161848 and median =-0.006032529	
+  
+  problem_2_df%>%
+    count(x +y >1) %>%
+    mutate(freq = n / sum(n)) #The proportion of cases for which x + y > 1 = 7.6%
     
 
 ```
