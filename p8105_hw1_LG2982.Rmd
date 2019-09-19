@@ -16,10 +16,10 @@ library(tidyverse) # this is how I load a library
 
 
 problem_1_df = tibble(
-  x = rnorm(8, sd = .5),
-  vec_logical = (x> 0),
-  vec_char = c("Coding", "in", "R", "language", "is", "so", "much","fun"),
-  vec_factor = factor(c("male", "male", "female", "female","male", "male", "female", "female"))
+  x = rnorm(8, sd = .5), #Created a random sample with 8 observations
+  vec_logical = (x> 0),  # Cretes a logical vector that makes all x obs >0
+  vec_char = c("Coding", "in", "R", "language", "is", "so", "much","fun"), #created a vector with a character
+  vec_factor = factor(c("male", "male", "female", "female","male", "male", "female", "female")) # created a variable with two level factor
 )
 
 problem_1_df%>%
@@ -33,9 +33,33 @@ problem_1_df%>%
 
 problem_1_df%>%
   summarise(meanfact = mean(vec_factor)) #cant do this because is a factor vector
+
+
+
+```
+
+
+```{r, eval=FALSE}
+problem_1_df%>%
+mutate (as.numeric(vec_logical))
+
+problem_1_df%>%
+mutate (as.numeric(vec_factor))
+
+problem_1_df%>%
+mutate (as.numeric(vec_char))
 ```
 
 ```{r, }
+problem_1_df%>%
+mutate (as.numeric(vec_logical))
+
+
+problem_1_df%>%
+mutate (as.numeric(vec_factor))
+
+problem_1_df%>%
+mutate (as.numeric(vec_char))
 
 ```
 
